@@ -1,0 +1,113 @@
+    1  ip a
+    2  ping -c 4 8.8.8.8
+    3  ping -c 4 google.com
+    4  ssh jorge@192.168.0.103
+    5  sudo apt update
+    6  sudo apt upgrade -y
+    7  sudo reboot
+    8  ssh jorge@192.168.0.103
+    9  sudo apt update
+   10  sudo apt upgrade -y
+   11  sudo reboot
+   12  ssh jorge@192.168.0.103
+   13  sudo apt install -y ca-certificates curl gnupg
+   14  sudo install -m 0755 -d /etc/apt/keyrings
+   15  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   16  sudo chmod a+r /etc/apt/keyrings/docker.gpg
+   17  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+   18  $(. /etc/os-releasse && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   19  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+   20  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   21  sudo apt update
+   22  sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   23  sudo usermod -aG docker $USER
+   24  newgrp docker
+   25  docker --version
+   26  docker compose version
+   27  docker run --rm hello-world
+   28  mkdir -p ~/thingsboard
+   29  cd ~/thingsboard
+   30  nano docker-compose.yml
+   31  docker compose up -d
+   32  docker ps
+   33  cat docker-compose.yml 
+   34  nano docker-compose.yml
+   35  cat docker-compose.yml 
+   36  docker compose up -d
+   37  docker ps
+   38  cat docker-compose.yml 
+   39  nano docker-compose.yml
+   40  docker compose up -d
+   41  sudo shutdown now
+   42  docker ps
+   43  cd ~/thingsboard
+   44  docker compose up -d
+   45  docker ps
+   46  docker logs thingsboard
+   47  docker logs -f thingsboard
+   48  ss -tulnp | grep 8080
+   49  docker logs thigsboard | tail -n 30
+   50  docker logs -f thingsboard
+   51  docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Ports}}"
+   52  curl -I http://localhost:8080
+   53  docker ps
+   54  docker inspect thingsboard --format='{{.State.Status}} - RestartCount={{.RestartCount}}'
+   55  docker logs thingsboard
+   56  dmesg | grep -i kill
+   57  docker port thingsboard
+   58  docker exec -it thingsboard sh -c "wger -S -O- http://127.0.0.1:8080 2>&1 | head -n 20"
+   59  docker exec -it thingsboard sh -c "wget -S -O- http://127.0.0.1:8080 2>&1 | head -n 20"
+   60  docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddres}}{{end}}' thingsboard
+   61  docker exec -it thingsboard sh -c "ss -tulnp | grep -E ':8080|:80|:9090|:1883' || true"
+   62  docker logs thingsboard | egrep -i "error|exception|failed|bind|http|8080|server|tomcat|netty" | tail -n 120
+   63  docker exec -it thingsboard sh -c "env | egrep -i 'port|http|server' || true"
+   64  curl -I http://localhost:9090
+   65  docker -compose.yml
+   66  docker-compose.yml
+   67  docker -compose.yml
+   68  docker logs thigsboard | grep -i "port"
+   69  docker ps
+   70  docker logs 5fec3388572d --tail 200
+   71  docker logs 5fec3388572d --tail 300 | grep -i port
+   72  docker-compose.yml
+   73  docker -compose.yml
+   74  nano docker -compose.yml
+   75  nano docker-compose.yml
+   76  docker port 5fec3388572d
+   77  docker compose down
+   78  docker compose up -d --force-recreate
+   79  docker ps
+   80  docker port thingsboard
+   81  curl -v http://127.0.0.1:8080
+   82  curl -v http://localhost:8080
+   83  docker logs --tail 300 thingsboard
+   84  curl -v http://127.0.0.1:9090
+   85  nano docker-compose.yml
+   86  docker port thingsboard
+   87  curl -v http://127.0.0.1:9090
+   88  nano docker-compose.yml
+   89  docker compose down
+   90  docker compose up -d --force-recreate
+   91  docker ps --format "table {{.Names}}\t{{.Ports}}"
+   92  curl -v http://127.0.0.1:8080
+   93  nano docker-compose.yml
+   94  docker compose down
+   95  docker compose up -d --force-recreate
+   96  docker ps
+   97  docker port thingsboard
+   98* curl -v http://127.0.0.1:9
+   99  curl -v http://localhost:9090
+  100  nano docker-compose.yml
+  101  docker compose down
+  102  docker compose up -d --force-recreate
+  103  docker ps --format "table {{.Names}}\t{{.Ports}}"
+  104  curl -I http://localhost:8080
+  105  cd ~/thingsboard
+  106  docker ps
+  107  docker ps --format "table {{.Names}}\t{{.Ports}}"
+  108  nano ~/thingsboard/docker-compose.yml
+  109  docker compose down
+  110  docker compose up -d --force-recreate
+  111  curl -I http://localhost:8080
+  112  history
+  113  history > history.txt
