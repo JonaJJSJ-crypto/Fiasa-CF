@@ -1,0 +1,290 @@
+[
+    {
+        "Id": "115f690b8308ee09b90ab9c65c6362064554b7de7d0491cb9564a47d6620ee25",
+        "Created": "2026-02-11T19:57:55.734938241Z",
+        "Path": "start-tb.sh",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1361,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-02-12T13:53:03.139984861Z",
+            "FinishedAt": "2026-02-11T21:25:30.028359965Z"
+        },
+        "Image": "sha256:b98e862992d454e5b6a45229854d96783b0efa669f718578fc5fc3ae38edb52f",
+        "ResolvConfPath": "/var/lib/docker/containers/115f690b8308ee09b90ab9c65c6362064554b7de7d0491cb9564a47d6620ee25/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/115f690b8308ee09b90ab9c65c6362064554b7de7d0491cb9564a47d6620ee25/hostname",
+        "HostsPath": "/var/lib/docker/containers/115f690b8308ee09b90ab9c65c6362064554b7de7d0491cb9564a47d6620ee25/hosts",
+        "LogPath": "/var/lib/docker/containers/115f690b8308ee09b90ab9c65c6362064554b7de7d0491cb9564a47d6620ee25/115f690b8308ee09b90ab9c65c6362064554b7de7d0491cb9564a47d6620ee25-json.log",
+        "Name": "/thingsboard",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "thingsboard_tb-data:/data:rw",
+                "thingsboard_tb-logs:/var/log/thingsboard:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "thingsboard_default",
+            "PortBindings": {
+                "1883/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "1883"
+                    }
+                ],
+                "9090/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8080"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "thingsboard_tb-data",
+                "Source": "/var/lib/docker/volumes/thingsboard_tb-data/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "thingsboard_tb-logs",
+                "Source": "/var/lib/docker/volumes/thingsboard_tb-logs/_data",
+                "Destination": "/var/log/thingsboard",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "115f690b8308",
+            "Domainname": "",
+            "User": "thingsboard",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "1883/tcp": {},
+                "5683/udp": {},
+                "5685/udp": {},
+                "9090/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "SPRING_DATASOURCE_PASSWORD=thingsboard",
+                "TB_QUEUE_TYPE=in-memory",
+                "SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/thingsboard",
+                "SPRING_DATASOURCE_USERNAME=thingsboard",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/12/bin",
+                "LANG=C.UTF-8",
+                "JAVA_HOME=/docker-java-home",
+                "JAVA_VERSION=11.0.22",
+                "JAVA_DEBIAN_VERSION=11.0.22+7-1~deb11u1",
+                "PG_MAJOR=12",
+                "DATA_FOLDER=/data",
+                "HTTP_BIND_PORT=9090",
+                "DATABASE_TS_TYPE=sql",
+                "PGDATA=/data/db",
+                "SPRING_DRIVER_CLASS_NAME=org.postgresql.Driver",
+                "PGLOG=/var/log/postgres"
+            ],
+            "Cmd": [
+                "start-tb.sh"
+            ],
+            "Image": "thingsboard/tb-postgres:3.6.3",
+            "Volumes": {
+                "/data": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "73b6a9305833d7c3c8126f1506fc59c2a8078702a1dd718220e9f5bcc5f65222",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "postgres:service_started:false",
+                "com.docker.compose.image": "sha256:b98e862992d454e5b6a45229854d96783b0efa669f718578fc5fc3ae38edb52f",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "thingsboard",
+                "com.docker.compose.project.config_files": "/home/jorge/thingsboard/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/home/jorge/thingsboard",
+                "com.docker.compose.service": "thingsboard",
+                "com.docker.compose.version": "5.0.2"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "f9dd533370dd7c819236029db65122165c74d4d1c6d9d3873775962381cb452b",
+            "SandboxKey": "/var/run/docker/netns/f9dd533370dd",
+            "Ports": {
+                "1883/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "1883"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "1883"
+                    }
+                ],
+                "5683/udp": null,
+                "5685/udp": null,
+                "9090/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8080"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "8080"
+                    }
+                ]
+            },
+            "Networks": {
+                "thingsboard_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "thingsboard",
+                        "thingsboard"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "7e5a373f182b785a0042822be8168337c45a163e963c1b2598c35f1c243c1c94",
+                    "EndpointID": "247581028cbcbe032b32f701a34f3ab2f6853b35d5a362b18d70fd77f1eec2ea",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "MacAddress": "3a:8c:4e:50:26:6d",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "thingsboard",
+                        "115f690b8308"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:470b444328b916ea48bacda8b996b618c623e1da6875205ab4882f2bf66a2ba2",
+            "size": 1301,
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux"
+            }
+        }
+    }
+]
